@@ -1,0 +1,51 @@
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+    <meta charset="UTF-8">
+    <title>Gestión de Fichas</title>
+    <link rel="stylesheet" href="stylee.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        
+        .retiro { background-color: #f8d7da !important; }
+        .hidden { display: none; }
+    </style>
+    </head>
+    <body class="container mt-4">
+
+    <div id="login-container">
+        <h3>Iniciar sesión</h3>
+        <form id="login-form">
+        <div class="mb-3">
+            <label for="username" class="form-label">Usuario</label>
+            <input type="text" id="username" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Contraseña</label>
+            <input type="password" id="password" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Ingresar</button>
+        </form>
+        <p id="login-error" class="text-danger mt-2"></p>
+    </div>
+
+    <div id="main-container" class="hidden">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+        <h4>Bienvenido, <span id="user-display"></span></h4>
+        <button id="logout-btn" class="btn btn-danger">Cerrar sesión</button>
+        </div>
+
+        <div class="mb-3">
+        <label for="selectFicha" class="form-label">Ficha</label>
+        <input list="listaFichas" id="selectFicha" class="form-control" />
+        <datalist id="listaFichas"></datalist>
+        <button class="btn btn-primary mt-2" onclick="mostrarFicha()">Buscar</button>
+        </div>
+
+        <h5 id="nombrePrograma"></h5>
+        <table id="tablaAprendices" class="table table-striped"></table>
+    </div>
+
+    <script src="js.js"></script>
+    </body>
+    </html>
