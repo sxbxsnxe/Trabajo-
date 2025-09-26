@@ -1,14 +1,14 @@
-    const url = "https://raw.githubusercontent.com/CesarMCuellarCha/apis/refs/heads/main/SENA-CTPI.matriculados.json";
-    window.datos = [];
+const url = "https://raw.githubusercontent.com/CesarMCuellarCha/apis/refs/heads/main/SENA-CTPI.matriculados.json";
+window.datos = [];
 
-    const loginContainer = document.getElementById('login-container');
-    const mainContainer = document.getElementById('main-container');
-    const loginForm = document.getElementById('login-form');
-    const loginError = document.getElementById('login-error');
-    const userDisplay = document.getElementById('user-display');
-    const logoutBtn = document.getElementById('logout-btn');
+const loginContainer = document.querySelector('.login-container');
+const mainContainer = document.getElementById('main-container');
+const loginForm = document.getElementById('login-form');
+const loginError = document.getElementById('login-error');
+const userDisplay = document.getElementById('user-display');
+const logoutBtn = document.getElementById('logout-btn');
 
-    document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
     const savedUsername = localStorage.getItem('username');
     if (savedUsername) {
         userDisplay.textContent = savedUsername;
@@ -19,9 +19,9 @@
         loginContainer.classList.remove('hidden');
         mainContainer.classList.add('hidden');
     }
-    });
+});
 
-    loginForm.addEventListener('submit', (e) => {
+loginForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
@@ -35,17 +35,17 @@
     } else {
         loginError.textContent = 'Contraseña incorrecta. La válida es: adso3064975';
     }
-    });
+});
 
-    logoutBtn.addEventListener('click', () => {
+logoutBtn.addEventListener('click', () => {
     localStorage.clear();
     loginContainer.classList.remove('hidden');
     mainContainer.classList.add('hidden');
     loginForm.reset();
     loginError.textContent = '';
-    });
+});
 
-    async function cargarFichas() {
+async function cargarFichas() {
     const input = document.getElementById("selectFicha");
     const lista = document.getElementById("listaFichas");
     if (input) {
@@ -100,9 +100,9 @@
         input.placeholder = "Error al cargar fichas";
         }
     }
-    }
+}
 
-    function mostrarFicha() {
+function mostrarFicha() {
     const inputEl = document.getElementById("selectFicha");
     const codigo = inputEl ? inputEl.value.trim() : "";
     if (!codigo) {
@@ -178,4 +178,4 @@
         </tbody>
         `;
     }
-    }
+}
