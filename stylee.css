@@ -21,7 +21,6 @@ body {
     display: none !important;
 }
 
-/* ===== ESTILOS DEL LOGIN COMPACTO ===== */
 .login-container {
     min-height: 100vh;
     display: flex;
@@ -61,10 +60,6 @@ body {
 }
 
 
-
-/* ===== ESTILOS DE LA APLICACIÓN PRINCIPAL ===== */
-
-/* Header de la aplicación */
 .app-header {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
@@ -111,13 +106,11 @@ body {
     margin-right: 5px;
 }
 
-/* Contenido principal */
 .main-content {
     padding-top: 2rem;
     padding-bottom: 2rem;
 }
 
-/* Tarjetas generales */
 .search-card,
 .programa-card,
 .table-card {
@@ -148,7 +141,6 @@ body {
     padding: 1.5rem;
 }
 
-/* Formulario de búsqueda */
 .search-form .form-group {
     margin-bottom: 0;
 }
@@ -199,7 +191,6 @@ body {
     margin-right: 5px;
 }
 
-/* Información del programa */
 .programa-name {
     color: #2d3748;
     font-weight: 600;
@@ -207,7 +198,6 @@ body {
     font-size: 1.1rem;
 }
 
-/* Tabla personalizada */
 .table-container {
     overflow-x: auto;
     border-radius: 8px;
@@ -242,7 +232,6 @@ body {
     border-bottom: none;
 }
 
-/* Badge contador */
 .badge {
     background: #667eea;
     color: white;
@@ -261,7 +250,6 @@ body {
     font-size: 0.9rem;
 }
 
-/* Estilos responsivos */
 @media (max-width: 768px) {
     .container {
         padding: 15px;
@@ -299,4 +287,5 @@ body {
         padding-top: 1rem;
         padding-bottom: 1rem;
     }
+
 }
